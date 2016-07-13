@@ -1,0 +1,131 @@
+﻿@model Emerge.Models.Model_Job
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Model_Job</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Requirements)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Requirements)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntryVersionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntryVersionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntryChangePerformed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntryChangePerformed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntryReasonForChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntryReasonForChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntryIsCurrent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntryIsCurrent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasPhotos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasPhotos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PictureID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PictureLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureLink)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Content/modern-business.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title -Emerge</title>
+    <link rel="icon" type="image/png" href="/images/emergeicon.png" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav style="font-size:20;font-family: Arial, Helvetica, sans-serif;" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Home", "Index", "Home")
+                <a class="navbar-brand" href="index.html"> <img src="~/images/emerge.gif" alt=""> </a>
+            </div>
+            <br> <br>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        @Html.ActionLink("About", "About", "home")
+                    </li>
+
+                    <li>
+                        @Html.ActionLink("Contact", "Contact", "home")
+                    </li>
+                    <li class="dropdown">
+                        <a href="~/Views/Job/List.cshtml" class="dropdown-toggle" data-toggle="dropdown">Job Seeker <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("System architects jobs", "Architect", "Jobs")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Java programming jobs", "Java", "Jobs")
+                            </li>
+                            <li>
+                               @Html.ActionLink(".Net programming jobs", "DotNet", "Jobs")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Mobile Development jobs", "Mobile", "Jobs")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Web Technology jobs", "Web", "Jobs")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Business analysts jobs", "Analyst", "Jobs")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Others", "Others", "Jobs")
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                    
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clients <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="">Top candidates</a>
+                            </li>
+                            <li>
+                                <a href="">Register</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="blog.html">Our Blog</a>
+                    </li>
+                    <li>
+                        @Html.Partial("_LoginPartial")
+                        <!--a href="signin.html">Sign in </!--a-->
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <br />
+    <br />
+    <br />
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+        
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 widget">
+                        <div class="widget-body">
+                            <p class="simplenav">
+                                <a href="#">Home</a> |
+                                <a href="">Jobs</a> |
+                                <a href="">Top Candidates</a> |
+                                <a href="">Contact us</a> |
+                                <a href="">Blog</a>  |
+                                <b><a href="">Sign up/Sign in</a></b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 widget">
+
+
+                        <p class="text-right">
+                        <p>&copy; @DateTime.Now.Year - <a href="http://leansystems.co.za"> Website by  &copy; Lean System 2016</a></p>
+                            
+                        </p>
+                    </div>
+                </div>
+                </div>
+        </footer>
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- Contact Form JavaScript -->
+    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <script src="~/Scripts/jqBootstrapValidation.js"></script>
+    <script src="~/Scripts/contact_me.js"></script>
+
+    @Scripts.Render("~/bundles/jquery")
+   <!----> @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

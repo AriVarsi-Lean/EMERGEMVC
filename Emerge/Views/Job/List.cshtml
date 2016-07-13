@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Emerge.Models.Model_Job>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JobID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Requirements)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntryVersionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntryChangePerformed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntryReasonForChange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntryIsCurrent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasPhotos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PictureID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PictureLink)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Requirements)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntryVersionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntryChangePerformed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntryReasonForChange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntryIsCurrent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HasPhotos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureLink)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
